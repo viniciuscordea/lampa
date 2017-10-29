@@ -11,9 +11,13 @@ module masa_cafea (lungime_top,latime_top,grosime_top,lungime_baza,latime_baza,g
 //---------------------------------------------
 
 module baza_masa(lungime_baza,latime_baza,grosime_baza)
-{
+{difference()
+    {
     cube([lungime_baza,latime_baza,grosime_baza]);
+    translate([1,1,-1])cube([lungime_baza-2,latime_baza-2,grosime_baza+2]);
+    }
 }
+
 //---------------------------------------------
 
 module picior_masa(raza_picior,inaltime_picior)

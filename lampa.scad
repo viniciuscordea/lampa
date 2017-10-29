@@ -23,8 +23,11 @@ module picior_masa(raza_picior,inaltime_picior)
 //---------------------------------------------
 
 module top_masa(lungime_top,latime_top,grosime_top)
-{
+{difference()
+    {
     cube([lungime_top,latime_top,grosime_top]);
+    translate([1,1,-1])cube([lungime_top-2,latime_top-2,grosime_top+2]);
+    }
 }
 //----------------------------------------------
 
